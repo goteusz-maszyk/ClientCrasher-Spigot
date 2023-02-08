@@ -1,0 +1,14 @@
+name: ClientCrasher
+version: '${project.version}'
+main: me.gotitim.clientcrasher.ClientCrasher
+api-version: 1.15
+description: Gud punishment for cheaters!
+commands:
+  crash:
+    description: Crash player's game
+    usage: "§cUsage: /crash <player>"
+  alwayscrash:
+    description: Add/remove entry from always crashing list
+    usage: "§cUsage: /alwayscrash <nick/uuid>"
+    aliases:
+      - crashban

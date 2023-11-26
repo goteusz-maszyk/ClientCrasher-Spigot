@@ -38,7 +38,7 @@ public final class ClientCrasher extends JavaPlugin implements Listener {
             Method getHandle = craftPlayerClass.getMethod("getHandle");
             EntityPlayer ePlayer = (EntityPlayer) getHandle.invoke(player);
 
-            ePlayer.c.a(new PacketPlayOutExplosion(
+            ePlayer.c.b(new PacketPlayOutExplosion(
                     Double.MAX_VALUE,
                     Double.MAX_VALUE,
                     Double.MAX_VALUE,

@@ -8,3 +8,5 @@ Or try using JitPack
 > Some day, I'll modify this mod to load mappings, so it would work for all the versions
 > 
 >  -gotitim
+
+Fabric version [here](https://github.com/goteusz-maszyk/ClientCrasher-Fabric)

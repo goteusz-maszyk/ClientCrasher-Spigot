@@ -2,8 +2,13 @@ package me.gotitim.clientcrasher;
 
 import me.gotitim.clientcrasher.command.AlwaysCrashCommand;
 import me.gotitim.clientcrasher.command.CrashCommand;
+import net.minecraft.core.particles.Particles;
 import net.minecraft.network.protocol.game.PacketPlayOutExplosion;
 import net.minecraft.server.level.EntityPlayer;
+import net.minecraft.sounds.SoundEffect;
+import net.minecraft.sounds.SoundEffects;
+import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.block.SoundEffectType;
 import net.minecraft.world.phys.Vec3D;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -44,7 +49,11 @@ public final class ClientCrasher extends JavaPlugin implements Listener {
                     Double.MAX_VALUE,
                     Float.MAX_VALUE,
                     List.of(),
-                    new Vec3D(Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE)
+                    new Vec3D(Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE),
+                    Explosion.Effect.b,
+                    Particles.x,
+                    Particles.w,
+                    SoundEffects.jA
             ));
         } catch (Exception e) {
             instance.getLogger().warning("Failed to find CraftPlayer class! Using package version " + version);

@@ -3,11 +3,25 @@ version: '${project.version}'
 main: me.gotitim.clientcrasher.ClientCrasher
 api-version: 1.15
 description: Gud punishment for cheaters!
+permissions :
+  clientcrasher.command.*:
+    description: Permission to use all ClientCrasher commands
+    default: op
+    children:
+      clientcrasher.command.crash: true
+  clientcrasher.command.crash:
+    description: Permission to use the normal crash command.
+    default: op
+  clientcrasher.command.alwayscrash:
+    description: Permission to use the alwayscrash command.
+    default: op
 commands:
   crash:
+    permission: clientcrasher.command.crash
     description: Crash player's game
     usage: "§cUsage: /crash <player>"
   alwayscrash:
+    permission: clientcrasher.command.alwayscrash
     description: Add/remove entry from always crashing list
     usage: "§cUsage: /alwayscrash <nick/uuid>"
     aliases:

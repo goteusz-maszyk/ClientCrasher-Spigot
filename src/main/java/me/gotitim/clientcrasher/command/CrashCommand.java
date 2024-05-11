@@ -11,10 +11,6 @@ import org.bukkit.entity.Player;
 public class CrashCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(!sender.isOp()) {
-            sender.sendMessage(ChatColor.RED + "I'm sorry, but you do not have permission to perform this command. Please contact server administrators if you believe that this is in error.");
-            return true;
-        }
         if(args.length == 0) return false;
         Player player = Bukkit.getPlayer(args[0]);
         if(player == null) {

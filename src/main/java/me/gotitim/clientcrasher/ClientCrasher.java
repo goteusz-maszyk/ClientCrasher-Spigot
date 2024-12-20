@@ -53,7 +53,7 @@ public final class ClientCrasher extends JavaPlugin implements Listener {
                     Explosion.Effect.b,
                     Particles.x,
                     Particles.w,
-                    SoundEffects.jA
+                    SoundEffects.ke
             ));
         } catch (Exception e) {
             instance.getLogger().warning("Failed to find CraftPlayer class! Using package version " + version);

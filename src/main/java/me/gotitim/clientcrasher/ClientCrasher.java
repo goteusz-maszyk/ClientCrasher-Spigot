@@ -37,9 +37,8 @@ public final class ClientCrasher extends JavaPlugin implements Listener {
     public void onDisable() { saveConfig(); }
 
     public static void crashPlayer(Player player) {
-        String version = Bukkit.getServer().getClass().getPackage().getName().split("\\.")[3];
         try {
-            Class<?> craftPlayerClass = Class.forName("org.bukkit.craftbukkit." + version + ".entity.CraftPlayer");
+            Class<?> craftPlayerClass = Class.forName("org.bukkit.craftbukkit.entity.CraftPlayer");
             Method getHandle = craftPlayerClass.getMethod("getHandle");
             EntityPlayer ePlayer = (EntityPlayer) getHandle.invoke(player);
 
@@ -53,10 +52,10 @@ public final class ClientCrasher extends JavaPlugin implements Listener {
                     Explosion.Effect.b,
                     Particles.x,
                     Particles.w,
-                    SoundEffects.jA
+                    SoundEffects.ke
             ));
         } catch (Exception e) {
-            instance.getLogger().warning("Failed to find CraftPlayer class! Using package version " + version);
+            instance.getLogger().warning("Failed to find CraftPlayer class!");
         }
     }
 
